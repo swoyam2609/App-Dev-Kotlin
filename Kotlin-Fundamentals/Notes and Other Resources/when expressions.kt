@@ -35,8 +35,10 @@ fun main(){
         in 4..6 -> println("Summer")
         in 7..9 -> println("Fall")
         in 10..12 -> println("Winter")
+        in 12 downTo 2 -> println("Swoyam")
         else -> println("Invalid Season")
     }
+    //When is similar to the switch statement of c++ and c just with some additional features
 
     // challenge - translate the if statement with the age to a when expression
     when(age){
