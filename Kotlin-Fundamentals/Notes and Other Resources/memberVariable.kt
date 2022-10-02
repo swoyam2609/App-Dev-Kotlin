@@ -1,7 +1,7 @@
 class Person public constructor(firstName: String, lastName: String){
     //Member Variables
     var age: Int? = null
-    var hobby: String = "Surfing Netflix" //Default hobby for the class Person
+    lateinit private var hobby: String = "Surfing Netflix" //Default hobby for the class Person
 
     //Member Functions
     fun findHobby(): String{
@@ -9,15 +9,15 @@ class Person public constructor(firstName: String, lastName: String){
     }
 
     //Mmeber secondary constructor
-    constructor(firstName: String, lastName: String, age: Int)
+    constructor(firstName: String, lastName: String, age: Int, myHobby: String)
         :this(firstName, lastName){
             this.age=age
+            this.hobby=myHobby
         }
 }
 
 fun main(){
-    var Me: Person = Person("Swoyam Siddharth", "Nayak", 19)
-    Me.hobby="Playing Table Tennis"
+    var Me: Person = Person("Swoyam Siddharth", "Nayak", 19, "Playing Football")
     println(Me.findHobby())
     println(Me.age)
 }
