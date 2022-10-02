@@ -27,7 +27,7 @@ class Car(){
     get(){
         return field
     }
-    set(value){
+    private set(value){
         if(value>0){
             field = value
         }
@@ -36,7 +36,7 @@ class Car(){
         }
     }
 }
- 
+
 fun main(){
     var Me: Person = Person("Swoyam Siddharth", "Nayak", 19, "Playing Football")
     println(Me.findHobby())
