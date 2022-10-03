@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Age Calculator</string>
+
+    <string-array name="programming_languages">
+        <item>Java</item>
+        <item>Kotlin</item>
+        <item>Python</item>
+        <item>CPP</item>
+    </string-array>
+
+
 </resources>

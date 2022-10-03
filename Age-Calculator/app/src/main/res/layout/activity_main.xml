@@ -52,86 +52,88 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
-        android:text="Select Date" />
+        android:text="Select your Birth Date" />
 
     <TextView
+        android:id="@+id/selectedDateDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="3dp"
         android:textColor="#AE0C0C"
         android:padding="5dp"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:text="Selceted Date"
+        android:text="--/--/----"
         android:textAlignment="center"
         />
 
     <TextView
+        android:id="@+id/showYourDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:textColor="@color/lightGrey"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:text="Selceted Date"
+        android:text="Your Selected Date"
         android:textAlignment="center"
         />
 
+
     <RadioGroup
+        android:id="@+id/groupRadio"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content" >
 
         <RadioButton
-            android:id="@+id/radioButton1"
-            android:layout_width="match_parent"
+            android:id="@+id/radioButtonYear"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="0dp"
-            android:layout_margin="0dp"
             android:text="in Years" />
+
         <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
+            android:id="@+id/radioButtonMonth"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="in Months" />
+
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/radioButtonDay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="in Days" />
+
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/radioButtonHour"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="in Hours" />
+
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/radioButtonMinute"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="in Minutes" />
-
     </RadioGroup>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:textColor="#AE0C0C"
-        android:padding="5dp"
-        android:textSize="35sp"
-        android:textStyle="bold"
+        android:layout_marginTop="20dp"
         android:text="Selceted Date"
         android:textAlignment="center"
-        />
+        android:textColor="@color/lightGrey"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/lightGrey"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
         android:text="Selceted Date"
         android:textAlignment="center"
-        />
+        android:textColor="#AE0C0C"
+        android:textSize="35sp"
+        android:textStyle="bold" />
 </LinearLayout>
