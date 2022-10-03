@@ -16,31 +16,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Calculate Your"
+        android:layout_marginBottom="1dp"
+        android:text="Calculate Your AGE"
         android:textAlignment="center"
         android:textColor="#AE0C0C"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textColor="#FFFFFF"
-        android:padding="10dp"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:text="Age"
-        android:background="#AE0C0C"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="0dp"
         android:textColor="#AE0C0C"
-        android:padding="10dp"
+        android:padding="0dp"
         android:textSize="20sp"
         android:textStyle="bold"
         android:text="in Minutes/Hours/Days/Months/Years"
@@ -51,7 +41,7 @@
         android:id="@+id/buttonDatePicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="30dp"
         android:text="Select your Birth Date" />
 
     <TextView
@@ -87,13 +77,13 @@
 
         <RadioButton
             android:id="@+id/radioButtonYear"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="in Years" />
 
         <RadioButton
             android:id="@+id/radioButtonMonth"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="in Months" />
 
@@ -116,6 +106,13 @@
             android:text="in Minutes" />
     </RadioGroup>
 
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refresh"
+        android:backgroundTint="@color/purple_700"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -135,6 +132,8 @@
         android:text="-------"
         android:textAlignment="center"
         android:textColor="#AE0C0C"
-        android:textSize="35sp"
+        android:textSize="50sp"
         android:textStyle="bold" />
+
+
 </LinearLayout>
