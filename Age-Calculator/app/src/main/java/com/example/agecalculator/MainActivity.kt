@@ -45,7 +45,9 @@ class MainActivity : AppCompatActivity() {
             val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
 
             val thisDate = sdf.parse(toShowText)
+            val currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
 
+            
         }, year, month, day).show()
 
 

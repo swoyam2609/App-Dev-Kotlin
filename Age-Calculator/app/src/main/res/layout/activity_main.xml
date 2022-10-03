@@ -120,18 +120,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Selceted Date"
+        android:text="Your age is"
         android:textAlignment="center"
         android:textColor="@color/lightGrey"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/resultAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:padding="5dp"
-        android:text="Selceted Date"
+        android:text="-------"
         android:textAlignment="center"
         android:textColor="#AE0C0C"
         android:textSize="35sp"
