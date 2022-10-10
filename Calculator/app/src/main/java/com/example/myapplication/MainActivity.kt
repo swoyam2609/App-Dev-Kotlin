@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     private var lastNum = false
     private var lastDot = false
     private var lastOperator = false
+    private var lastEqual = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +22,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onButtonClick(view: View){
+        if(lastEqual){
+            calculatorView?.text=""
+            lastNum = false
+            lastDot = false
+            lastOperator = false
+            lastEqual = false
+        }
         calculatorView?.append((view as Button).text)
         lastNum = true
         lastOperator = false
@@ -34,6 +42,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onDecimalClick(view: View){
+        if(lastEqual){
+            calculatorView?.text=""
+            lastNum = false
+            lastDot = false
+            lastOperator = false
+            lastEqual = false
+        }
         if(lastNum && !lastDot){
             calculatorView?.append((view as Button).text)
             lastNum = false
@@ -53,15 +68,71 @@ class MainActivity : AppCompatActivity() {
             lastOperator=true
         }
         else if(!lastOperator && lastNum){
-            calculatorView?.append(" ")
+            if(lastEqual){
+                calculatorView?.text=""
+                lastNum = false
+                lastDot = false
+                lastOperator = false
+                lastEqual = false
+            }
             calculatorView?.append((view as Button).text)
-            calculatorView?.append(" ")
             lastNum=false
             lastDot=false
             lastOperator=true
         }
         else{
             Toast.makeText(this, "Invalid Operation", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    fun onClickEqual(view: View){
+        if(lastNum){
+            var textViewInput = calculatorView?.text.toString()
+            try{
+                var negetiveStart = false
+                if (textViewInput[0]=='-'){
+                    textViewInput=textViewInput.substring(1)
+                    negetiveStart = true
+                }
+                var resultArray = textViewInput?.split("/","X","-","+")
+                var one = resultArray?.get(0)?.toDouble()
+                if (negetiveStart){
+                    one = -1* one!!
+                }
+                var two = resultArray?.get(1)?.toDouble()
+                if(textViewInput?.contains("-") == true){
+                    if (one != null) {
+                        if (two != null) {
+                            calculatorView?.text = (one-two).toString()
+                        }
+                    }
+                }
+                else if(textViewInput?.contains("/") == true){
+                    if (one != null) {
+                        if (two != null) {
+                            calculatorView?.text = (one.toDouble()/two.toDouble()).toString()
+                        }
+                    }
+                }
+                else if(textViewInput?.contains("X") == true){
+                    if (one != null) {
+                        if (two != null) {
+                            calculatorView?.text = (one.toDouble()*two.toDouble()).toString()
+                        }
+                    }
+                }
+                else if(textViewInput?.contains("+") == true){
+                    if (one != null) {
+                        if (two != null) {
+                            calculatorView?.text = (one.toDouble()+two.toDouble()).toString()
+                        }
+                    }
+                }
+                lastEqual = true
+            }
+            catch (e: ArithmeticException){
+                e.printStackTrace()
+            }
         }
     }
 }
