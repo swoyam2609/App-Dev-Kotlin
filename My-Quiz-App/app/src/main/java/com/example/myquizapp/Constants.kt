@@ -1,6 +1,19 @@
 package com.example.myquizapp
 
+import android.text.Editable
+
 object Constants {
+
+    var correctQuestion=0
+    var userName : String? = null
+
+    fun getName(name: Editable){
+        userName= name.toString()
+    }
+
+    fun increaseCorrect(){
+        correctQuestion++
+    }
 
     fun getQuestion():ArrayList<Question>{
 
