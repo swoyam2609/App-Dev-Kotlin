@@ -56,7 +56,7 @@ object Constants {
             "Swoyam Siddharth Nayak",
             "Sidharth Suvanakar Nayak",
             "Roshan Dash",
-            3
+            2
         )
 
         listOfQuestion.add(que3)

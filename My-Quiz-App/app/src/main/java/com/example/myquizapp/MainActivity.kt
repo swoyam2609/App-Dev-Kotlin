@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        Constants.correctQuestion=0
+
         val btnStart : Button = findViewById(R.id.btn_start)
         val inputText : EditText = findViewById(R.id.inputText)
         btnStart.setOnClickListener {

@@ -44,6 +44,8 @@ class QuizQuestionsActivity : AppCompatActivity() {
         optionD = findViewById(R.id.quizOptionD)
         submitButton = findViewById(R.id.nextButton)
 
+
+
         setQuestion(questionsList[currentQuestion], currentQuestion)
 
         submitButton?.setOnClickListener {
@@ -59,6 +61,10 @@ class QuizQuestionsActivity : AppCompatActivity() {
             }
             else{
                 setQuestion(questionsList[currentQuestion], currentQuestion)
+                optionA?.background = getDrawable(R.drawable.default_option_background)
+                optionB?.background = getDrawable(R.drawable.default_option_background)
+                optionC?.background = getDrawable(R.drawable.default_option_background)
+                optionD?.background = getDrawable(R.drawable.default_option_background)
             }
         }
 
