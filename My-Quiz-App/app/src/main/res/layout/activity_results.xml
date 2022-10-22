@@ -5,15 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ResultsActivity"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/result_background">
+
+
+    <ImageView
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:src="@drawable/congratulations"/>
 
     <TextView
         android:id="@+id/outputText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Congratulations\nYou've scored 7/7"
+        android:textColor="@color/white"
         android:gravity="center"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:textStyle="bold"/>
 
 
